@@ -1,5 +1,7 @@
 package learning.self.kotlin.a7minuteworkout
 
+import android.app.Dialog
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +13,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_exercise.*
+import kotlinx.android.synthetic.main.dialog_custom_back_confirmation.*
 import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
@@ -43,7 +46,7 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
 
         toolbar_exercise_activity.setNavigationOnClickListener{
-            onBackPressed()
+            customDialogForBackButton()
         }
 
         tts = TextToSpeech(this,this)
@@ -115,9 +118,9 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     exerciseAdapter!!.notifyDataSetChanged() //update the adapter about change the data
                     setupRestView()
                 }else{
-                    Toast.makeText(this@ExerciseActivity,
-                    "Congratulations! You Have Completed the 7 minutes workout",
-                    Toast.LENGTH_SHORT).show()
+                    finish()
+                    val intent = Intent(this@ExerciseActivity, FinishActivity::class.java)
+                    startActivity(intent)
                 }
             }
         }.start()
@@ -188,6 +191,22 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
 
         super.onDestroy()
+    }
+
+    private fun customDialogForBackButton(){
+        val customDialog = Dialog(this)
+        customDialog.setContentView(R.layout.dialog_custom_back_confirmation)
+        // YES
+        customDialog.yes_btn.setOnClickListener {
+            finish() // go back to main activity
+            customDialog.dismiss() // close the dialog
+        }
+        // NO
+        customDialog.no_btn.setOnClickListener {
+            customDialog.dismiss() // close the dialog
+        }
+
+        customDialog.show()
     }
 
 }
