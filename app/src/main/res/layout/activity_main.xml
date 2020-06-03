@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:background="@color/white">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
 
         <ImageView
             android:layout_width="match_parent"
@@ -18,7 +14,8 @@
             android:scaleType="centerCrop"
             android:contentDescription="cover image"
             android:src="@drawable/workout_banner"/>
-        
+
+        <!-- START BUTTON -->
         <LinearLayout
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -34,9 +31,43 @@
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
-
         </LinearLayout>
+
+    <!-- BMI CALCULATOR AND HISTORY ACTIVITY -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- BMI CALCULATOR-->
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circular_color_background"
+            android:id="@+id/bmi_ll">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Calculator"
+            android:textSize="22sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
