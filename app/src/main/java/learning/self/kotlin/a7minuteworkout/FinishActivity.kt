@@ -1,9 +1,10 @@
 package learning.self.kotlin.a7minuteworkout
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_finish.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class FinishActivity : AppCompatActivity() {
 
@@ -26,5 +27,17 @@ class FinishActivity : AppCompatActivity() {
         finish_btn.setOnClickListener{
             finish() // finish this activity and go back to main activity
         }
+
+        addDateToDB()
+    }
+
+    private fun addDateToDB(){
+        val calendar = Calendar.getInstance()
+        val dateTime = calendar.time
+        val sdf = SimpleDateFormat("dd MMM yyyy HH:mm", Locale.getDefault())
+        val date = sdf.format(dateTime)
+
+        val dbHandler = SqliteOpenHelper(this,null)
+        dbHandler.addDate(date)
     }
 }

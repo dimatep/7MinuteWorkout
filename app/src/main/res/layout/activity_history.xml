@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HistoryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/toolbar_bg"
+        app:title="HISTORY"
+        app:subtitleTextColor="@color/white"
+        app:subtitle="Exercise Completed"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar_history_activity"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/history_rv"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NO DATA AVAILABLE!"
+            android:textColor="#212121"
+            android:visibility="visible"
+            tools:visibility="gone"
+            android:id="@+id/no_data_tv"/>
+    </LinearLayout>
+
+</LinearLayout>
