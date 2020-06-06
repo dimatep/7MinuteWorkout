@@ -15,11 +15,11 @@ The database stored with SQLite system.
 ## Screenshots
 
 [<img src="https://user-images.githubusercontent.com/51478377/83945883-3333c880-a816-11ea-8e22-a86fd55e66e6.jpeg" align="left"
-width="250" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945883-3333c880-a816-11ea-8e22-a86fd55e66e6.jpeg)
+width="260" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945883-3333c880-a816-11ea-8e22-a86fd55e66e6.jpeg)
 [<img src="https://user-images.githubusercontent.com/51478377/83945889-39c24000-a816-11ea-94f2-57729aafa887.jpeg" align="center"
-width="250" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945889-39c24000-a816-11ea-94f2-57729aafa887.jpeg)
+width="260" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945889-39c24000-a816-11ea-94f2-57729aafa887.jpeg)
 [<img src="https://user-images.githubusercontent.com/51478377/83945896-43e43e80-a816-11ea-8de8-35ecfbcdab89.jpeg" align="right"
-width="250" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945896-43e43e80-a816-11ea-8de8-35ecfbcdab89.jpeg)
+width="260" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945896-43e43e80-a816-11ea-8de8-35ecfbcdab89.jpeg)
     
 [<img src="https://user-images.githubusercontent.com/51478377/83945899-48105c00-a816-11ea-80aa-3cb305e0a5a5.jpeg" align="left"
 width="270" hspace="10" vspace="10">](https://user-images.githubusercontent.com/51478377/83945899-48105c00-a816-11ea-80aa-3cb305e0a5a5.jpeg)
