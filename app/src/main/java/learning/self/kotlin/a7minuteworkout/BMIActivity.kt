@@ -22,7 +22,7 @@ class BMIActivity : AppCompatActivity() {
         setSupportActionBar(toolbar_bmi_activity)
         val actionBar = supportActionBar
         if(actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true) //set back buton
+            actionBar.setDisplayHomeAsUpEnabled(true) //set back button
         }
         // set back button action
         toolbar_bmi_activity.setNavigationOnClickListener {
@@ -32,9 +32,8 @@ class BMIActivity : AppCompatActivity() {
         calculate_units_btn.setOnClickListener {
             if(currentVisibleView.equals(METRIC_UNITS_VIEW)) {
                 if (validateMetricUnits()) {
-                    val heightValue: Float =
-                        metric_unit_height_et.text.toString().toFloat() / 100 // convert to meters
-                    val weightValue: Float = metric_unit_height_et.text.toString().toFloat()
+                    val heightValue: Float = metric_unit_height_et.text.toString().toFloat() / 100 // convert to meters
+                    val weightValue: Float = metric_unit_weight_et.text.toString().toFloat()
 
                     val bmi = weightValue / (heightValue * heightValue)
                     displayBMIResult(bmi)
@@ -47,8 +46,8 @@ class BMIActivity : AppCompatActivity() {
                     val feetValue: String = us_unit_height_feet_et.text.toString()
                     val inchValue: String = us_unit_height_inch_et.text.toString()
 
-                    val heightValue = inchValue.toFloat() + feetValue.toFloat() * 12
-                    val bmi = 703 * (weightValue / (heightValue * heightValue))
+                    val heightValue = (feetValue.toFloat() * 12) + inchValue.toFloat()
+                    val bmi = (weightValue / (heightValue * heightValue)) * 703
                     displayBMIResult(bmi)
                 } else {
                     Toast.makeText(this, "Please enter valid values", Toast.LENGTH_SHORT).show()

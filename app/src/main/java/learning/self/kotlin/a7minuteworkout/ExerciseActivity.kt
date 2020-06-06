@@ -22,9 +22,11 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private var restTimer : CountDownTimer? = null
     private var restProgress = 0
+    private var restTime : Long = 10
 
     private var exerciseTimer : CountDownTimer? = null
     private var exerciseProgress = 0
+    private var exerciseTime : Long = 30
 
     private var exerciseList : ArrayList<ExerciseModel>? = null
     private var currentExercisePosition = -1
@@ -61,12 +63,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     // rest
     private fun setRestProgressBar(){
         progressBar.progress = restProgress
-        restTimer = object : CountDownTimer(10000, 1000){
+        restTimer = object : CountDownTimer(restTime*1000, 1000){
 
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
-                progressBar.progress = 10 - restProgress
-                timer_tv.text = (10 - restProgress).toString()
+                progressBar.progress = restTime.toInt() - restProgress
+                timer_tv.text = (restTime - restProgress).toString()
             }
 
             override fun onFinish() {
@@ -103,12 +105,12 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     // exercise
     private fun setExerciseProgressBar(){
         exercise_progressBar.progress = exerciseProgress
-        exerciseTimer = object : CountDownTimer(30000, 1000){
+        exerciseTimer = object : CountDownTimer(exerciseTime*1000, 1000){
 
             override fun onTick(millisUntilFinished: Long) {
                 exerciseProgress++
-                exercise_progressBar.progress = 30 - exerciseProgress
-                exercise_timer_tv.text = (30 - exerciseProgress).toString()
+                exercise_progressBar.progress = exerciseTime.toInt() - exerciseProgress
+                exercise_timer_tv.text = (exerciseTime - exerciseProgress).toString()
             }
 
             override fun onFinish() {
@@ -191,6 +193,10 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
 
         super.onDestroy()
+    }
+
+    override fun onBackPressed() {
+        customDialogForBackButton()
     }
 
     private fun customDialogForBackButton(){
