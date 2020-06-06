@@ -1,4 +1,5 @@
-# 7MinuteWorkout
+# 7 Minute Workout - Android App
+<img src="https://user-images.githubusercontent.com/51478377/83949025-1d300300-a82a-11ea-9457-a665083a27a6.png" align="left">
 Daily 7 Minutes Workout Android Studio Application Using Kotlin Language. 
 The database stored with SQLite system.
 
