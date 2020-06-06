@@ -1,9 +1,12 @@
 # 7 Minute Workout - Android App
 <p align="center">
- <img src="https://user-images.githubusercontent.com/51478377/83949025-1d300300-a82a-11ea-9457-a665083a27a6.png" align="right" width="300" hspace="10" vspace="10">
-
-Daily 7 Minutes Workout Android Studio Application Using Kotlin Language. 
-The database stored with SQLite system.
+ <img src="https://user-images.githubusercontent.com/51478377/83949025-1d300300-a82a-11ea-9457-a665083a27a6.png" width="300" hspace="10" vspace="10">
+ </p>
+ 
+<p align="center">
+__Daily 7 Minutes Workout Android Studio Application Using Kotlin Language. 
+The database stored with SQLite system.__
+ </p>
 
 ## Features
 * 12 Exercises for daily routine.
