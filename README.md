@@ -4,7 +4,7 @@
  </p>
  
 
-**Daily 7 Minutes Workout Android Studio Application Using Kotlin Language. 
+**Daily 7 Minutes Workout Android Application Using Kotlin Language. 
 The database stored with SQLite system.**
 
 
